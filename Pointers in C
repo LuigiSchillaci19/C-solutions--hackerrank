@@ -1,9 +1,16 @@
 #include <stdio.h>
 
 void update(int *a,int *b) {
-    int c = *a;
-    *a= *a + *b;
-    *b= *b - c; 
+    int aplus = *a;
+    *a = aplus + *b;
+     if(aplus>*b)
+     {
+        *b = aplus - *b;
+     }
+     else {
+      *b = *b - aplus;
+     }
+    
 }
 
 int main() {
